@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {historyPage,beijingDay} from '../lib/history-pages.ts';
+const now=Date.parse('2026-10-13T05:00:00Z');
+const entries=['2026-10-13T05:00:00Z','2026-10-03T16:00:00Z','2026-10-03T15:59:59Z','2026-09-23T16:00:00Z','2026-09-23T15:59:59Z'].map((startedAt,id)=>({id,startedAt}));
+const first=historyPage(entries,0,now),second=historyPage(entries,1,now),third=historyPage(entries,2,now);
+assert.deepEqual([first.start,first.end,first.pageCount],['2026-10-04','2026-10-13',3]);
+assert.deepEqual(first.entries.map(e=>e.id),[0,1]);
+assert.deepEqual([second.start,second.end],['2026-09-24','2026-10-03']);assert.deepEqual(second.entries.map(e=>e.id),[2,3]);
+assert.deepEqual(third.entries.map(e=>e.id),[4]);
+assert.deepEqual([first,second,third].flatMap(p=>p.entries.map(e=>e.id)),entries.map(e=>e.id));
+assert.equal(historyPage(entries,99,now).page,2);assert.equal(historyPage(entries,-1,now).page,0);
+assert.equal(beijingDay('2026-10-03T16:00:00Z'),'2026-10-04');
+assert.deepEqual([historyPage([],0,now).pageCount,historyPage([],0,now).entries.length],[1,0]);
+const gap=historyPage([{startedAt:'2026-09-01T05:00:00Z'}],0,now);assert.equal(gap.entries.length,0);assert.equal(gap.pageCount,5);
+const year=historyPage([{startedAt:'2025-12-25T16:00:00Z'}],0,Date.parse('2026-01-04T02:00:00Z'));assert.equal(year.start,'2025-12-26');assert.equal(year.entries.length,1);
+console.log('10-day Beijing windows, boundaries, month/year rollover, empty pages and no-loss partition passed');

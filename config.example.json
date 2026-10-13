@@ -1,0 +1,16 @@
+{
+  "site_url": "http://127.0.0.1:5199",
+  "codex_root": "<YOUR_CODEX_HOME>",
+  "codex_db": "<YOUR_CODEX_HOME>/state_5.sqlite",
+  "wiki_root": "<YOUR_WIKI>",
+  "wps_root": "<YOUR_DOCUMENTS>",
+  "history_root": "<YOUR_CODEX_HOME>/memories/extensions/skysight/resources",
+  "exclude_thread": "",
+  "proxy": "",
+  "reminders_list_id": "",
+  "local_service_file": "<OFFICE_ROOT>/local-site/.selfhost-owner.json",
+  "focus_folders": [
+    "meetings",
+    "assistant-notes"
+  ]
+}

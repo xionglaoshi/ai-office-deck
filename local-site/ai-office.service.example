@@ -1,0 +1,20 @@
+[Unit]
+Description=Private AI Office dashboard
+After=network.target
+
+[Service]
+Type=simple
+User=ai-office
+WorkingDirectory=/opt/ai-office/site
+# Replace /usr/bin/node with the verified absolute Node 22.13+ executable path.
+ExecStart=/usr/bin/node scripts/run-selfhost.mjs
+Restart=on-failure
+RestartSec=5
+Environment=WRANGLER_SEND_METRICS=false
+Environment=WRANGLER_WRITE_LOGS=false
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

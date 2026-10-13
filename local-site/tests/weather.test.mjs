@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {parseWeather,currentWeatherValid,weatherDescription,chinaDate} from '../lib/weather.ts';
+const now=Date.parse('2026-10-13T05:30:00Z');
+const fixture={timezone:'Asia/Shanghai',current:{time:'2026-10-13T13:15',temperature_2m:26,apparent_temperature:27,weather_code:2},daily:{time:['2026-10-13'],weather_code:[3],temperature_2m_min:[19.4],temperature_2m_max:[26.2]}};
+const weather=parseWeather(fixture,now);
+assert.equal(weather.observedAt,'2026-10-13T13:15:00+08:00');assert.equal(weatherDescription(weather.todayCode),'阴');assert.equal(weatherDescription(weather.currentCode),'多云');
+assert.equal(chinaDate(Date.parse('2026-10-13T16:01:00Z')),'2026-10-14');
+assert.equal(currentWeatherValid(weather,Date.parse('2026-10-13T16:01:00Z')),false);
+assert.throws(()=>parseWeather({...fixture,daily:{...fixture.daily,time:['2026-10-12']}},now));
+assert.throws(()=>parseWeather({...fixture,current:{...fixture.current,time:'2026-10-13T09:00'}},now));
+assert.throws(()=>parseWeather({...fixture,current:{...fixture.current,temperature_2m:null}},now));
+assert.throws(()=>parseWeather({...fixture,daily:{...fixture.daily,temperature_2m_min:[30]}},now));
+assert.equal(weatherDescription(999),'天气状况待更新');
+console.log('Weather date, freshness, null and range checks passed');

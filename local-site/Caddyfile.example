@@ -1,0 +1,7 @@
+office.example.com {
+    # Replace with your own domain whose DNS points to this server.
+    encode zstd gzip
+    reverse_proxy 127.0.0.1:5199 {
+        header_up Host {host}
+    }
+}

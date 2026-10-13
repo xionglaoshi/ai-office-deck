@@ -1,0 +1,12 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {spawn} from 'node:child_process';
+const port=process.env.OFFICE_PORT||'5199';if(!/^\d{2,5}$/.test(port)||Number(port)>65535)throw Error('Invalid office port');
+const text=readFileSync(new URL('../.dev.vars',import.meta.url),'utf8');
+if(!/^SELF_HOSTED="?1"?$/m.test(text))throw Error('Self-host private settings missing; refuse to start');
+for(const key of ['OWNER_PASSWORD_HASH','OWNER_SESSION_KEY','OFFICE_SERVICE_TOKEN','OFFICE_PUBLIC_URL'])if(!new RegExp('^'+key+'=.+$','m').test(text))throw Error('Private setting missing: '+key);
+const config=JSON.parse(readFileSync('dist/server/wrangler.json','utf8'));
+config.vars={...config.vars,SELF_HOSTED:'1'};
+writeFileSync('dist/server/wrangler.selfhost.json',JSON.stringify(config));
+writeFileSync('dist/server/.dev.vars',text,{mode:0o600});
+const child=spawn(process.execPath,['--import','./scripts/sites-env.mjs','./node_modules/wrangler/bin/wrangler.js','dev','--config','dist/server/wrangler.selfhost.json','--local','--persist-to','.wrangler/state','--ip','127.0.0.1','--port',port,'--inspector-port','0','--env-file','.dev.vars'],{stdio:'inherit',env:{...process.env,WRANGLER_SEND_METRICS:'false'}});
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>child.kill(signal));child.on('exit',code=>process.exit(code??1));

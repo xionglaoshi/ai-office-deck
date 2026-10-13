@@ -1,0 +1,22 @@
+// Only the explicitly approved existing list. No list creation or deletion.
+ObjC.import('Foundation');
+
+function load(path){return JSON.parse(ObjC.unwrap($.NSString.stringWithContentsOfFileEncodingError(path,$.NSUTF8StringEncoding,null)));}
+function run(argv){const app=Application('Reminders'),op=argv[0],d=load(argv[1]);
+ const APPROVED=d.listId;if(typeof APPROVED!=='string'||!APPROVED)throw Error('Approved list is not configured');
+ const list=app.lists().find(x=>x.id()===APPROVED);if(!list)throw Error('Existing approved list unavailable');
+ if(op==='read')return JSON.stringify([{id:list.id(),name:list.name(),items:list.reminders().map(r=>r.properties())}]);
+ if(op==='create'){
+  const found=list.reminders().filter(r=>(r.body()||'').split(/\r?\n/).includes(d.marker));
+  if(found.length>1)throw Error('Duplicate stable source ID');
+  if(found.length===1)return JSON.stringify(found[0].properties());
+  const props={name:d.title,body:d.body,completed:false,priority:d.priority||0};
+  if(d.due)props.alldayDueDate=new Date(d.due+'T00:00:00+08:00');
+  const r=app.Reminder(props);list.reminders.push(r);return JSON.stringify(r.properties());
+ }
+ if(op!=='status'||d.completed!==true)throw Error('Only completion propagation is allowed');
+ const r=list.reminders().find(x=>x.id()===d.id);if(!r)throw Error('Reminder no longer exists');const p=r.properties();
+ if(p.completed===true)return JSON.stringify(p);
+ if(p.completed!==d.expectedCompleted||(p.modificationDate?new Date(p.modificationDate).toISOString():null)!==d.expectedModified)throw Error('Reminder changed concurrently');
+ r.completed=true;return JSON.stringify(r.properties());
+}

@@ -1,0 +1,990 @@
+{
+  "io.github.clash-verge-rev.clash-verge-rev": {
+    "name": "Clash Verge",
+    "icon": ""
+  },
+  "com.google.Chrome": {
+    "name": "Chrome",
+    "icon": ""
+  },
+  "com.kingsoft.wpsoffice.mac": {
+    "name": "WPS Office",
+    "icon": ""
+  },
+  "com.xunlei.Thunder": {
+    "name": "迅雷",
+    "icon": ""
+  },
+  "com.tencent.meeting": {
+    "name": "腾讯会议",
+    "icon": ""
+  },
+  "com.openai.codex": {
+    "name": "Codex",
+    "icon": ""
+  },
+  "com.tencent.xinWeChat": {
+    "name": "微信",
+    "icon": ""
+  },
+  "com.bot.pc.doubao": {
+    "name": "豆包",
+    "icon": ""
+  },
+  "com.tencent.WeWorkMac": {
+    "name": "企业微信",
+    "icon": ""
+  },
+  "com.deepseek.dsh": {
+    "name": "DeepSeek Harness",
+    "icon": ""
+  },
+  "com.tencent.xinWeChat.work": {
+    "name": "微信工作版",
+    "icon": ""
+  },
+  "abnerworks.Typora": {
+    "name": "Typora",
+    "icon": ""
+  },
+  "com.apple.Preview": {
+    "name": "预览",
+    "icon": ""
+  },
+  "com.apple.TextEdit": {
+    "name": "文本编辑",
+    "icon": ""
+  },
+  "com.apple.systempreferences": {
+    "name": "系统设置",
+    "icon": ""
+  },
+  "com.apple.stocks": {
+    "name": "股市",
+    "icon": ""
+  },
+  "com.apple.calculator": {
+    "name": "计算器",
+    "icon": ""
+  },
+  "com.apple.AppStore": {
+    "name": "App Store",
+    "icon": ""
+  },
+  "com.apple.iCal": {
+    "name": "日历",
+    "icon": ""
+  },
+  "com.apple.Terminal": {
+    "name": "终端",
+    "icon": ""
+  },
+  "com.apple.finder": {
+    "name": "访达",
+    "icon": ""
+  },
+  "com.apple.reminders": {
+    "name": "提醒事项",
+    "icon": ""
+  },
+  "cn.wps.wpscloudsvr": {
+    "name": "WPS云文档",
+    "icon": ""
+  },
+  "com.bot.pc.doubao.browser": {
+    "name": "豆包浏览器",
+    "icon": ""
+  },
+  "com.apple.frameworks.diskimages.diuiagent": {
+    "name": "磁盘映像",
+    "icon": ""
+  },
+  "cn.org.hermesagent.desktop": {
+    "name": "Hermes（通用图标）",
+    "icon": ""
+  },
+  "cn.wps.yunboxtool": {
+    "name": "WPS云文档（通用图标）",
+    "icon": ""
+  },
+  "com.kangfenmao.CherryStudio": {
+    "name": "Cherry Studio（通用图标）",
+    "icon": ""
+  },
+  "com.tencent.mac.tdappdesktop": {
+    "name": "腾讯文档（通用图标）",
+    "icon": ""
+  },
+  "com.workbuddy.workbuddy-ai": {
+    "name": "WorkBuddy（通用图标）",
+    "icon": ""
+  },
+  "com.wps.lingxi": {
+    "name": "WPS灵犀（通用图标）",
+    "icon": ""
+  },
+  "com.xiaomi.mimo.desktop": {
+    "name": "MiMo（通用图标）",
+    "icon": ""
+  },
+  "md.obsidian": {
+    "name": "Obsidian",
+    "icon": ""
+  },
+  "com.apple.AboutThisMacLauncher": {
+    "name": "About This Mac",
+    "icon": ""
+  },
+  "com.apple.accessibility.AccessibilityReader": {
+    "name": "Accessibility Reader",
+    "icon": ""
+  },
+  "com.apple.AccessibilityUIServer": {
+    "name": "Accessibility",
+    "icon": ""
+  },
+  "com.apple.ActivityMonitor": {
+    "name": "Activity Monitor",
+    "icon": ""
+  },
+  "com.apple.AddressBook": {
+    "name": "Contacts",
+    "icon": ""
+  },
+  "com.apple.AddressBook.UrlForwarder": {
+    "name": "AddressBookUrlForwarder",
+    "icon": ""
+  },
+  "com.apple.AirPlayUIAgent": {
+    "name": "AirPlay Screen Mirroring",
+    "icon": ""
+  },
+  "com.apple.airport.airportutility": {
+    "name": "AirPort Utility",
+    "icon": ""
+  },
+  "com.apple.AOSUIPrefPaneLauncher": {
+    "name": "AOSUIPrefPaneLauncher",
+    "icon": ""
+  },
+  "com.apple.AppleScriptUtility": {
+    "name": "AppleScript Utility",
+    "icon": ""
+  },
+  "com.apple.appleseed.FeedbackAssistant": {
+    "name": "Feedback Assistant",
+    "icon": ""
+  },
+  "com.apple.apps.launcher": {
+    "name": "Apps",
+    "icon": ""
+  },
+  "com.apple.archiveutility": {
+    "name": "Archive Utility",
+    "icon": ""
+  },
+  "com.apple.audio.AudioMIDISetup": {
+    "name": "Audio MIDI Setup",
+    "icon": ""
+  },
+  "com.apple.Automator": {
+    "name": "Automator",
+    "icon": ""
+  },
+  "com.apple.Automator.Automator-Application-Stub": {
+    "name": "Automator Application Stub",
+    "icon": ""
+  },
+  "com.apple.AutomatorInstaller": {
+    "name": "Automator Installer",
+    "icon": ""
+  },
+  "com.apple.AVB-Audio-Configuration": {
+    "name": "AVB Configuration",
+    "icon": ""
+  },
+  "com.apple.backup.launcher": {
+    "name": "Time Machine",
+    "icon": ""
+  },
+  "com.apple.Batteries": {
+    "name": "Batteries",
+    "icon": ""
+  },
+  "com.apple.BluetoothFileExchange": {
+    "name": "Bluetooth File Exchange",
+    "icon": ""
+  },
+  "com.apple.BluetoothSetupAssistant": {
+    "name": "BluetoothSetupAssistant",
+    "icon": ""
+  },
+  "com.apple.BluetoothUIServer": {
+    "name": "BluetoothUIServer",
+    "icon": ""
+  },
+  "com.apple.BluetoothUIService": {
+    "name": "BluetoothUIService",
+    "icon": ""
+  },
+  "com.apple.CalendarFileHandler": {
+    "name": "Calendar / Reminders",
+    "icon": ""
+  },
+  "com.apple.campo": {
+    "name": "Siri AI",
+    "icon": ""
+  },
+  "com.apple.CaptiveNetworkAssistant": {
+    "name": "Captive Network Assistant",
+    "icon": ""
+  },
+  "com.apple.CertificateAssistant": {
+    "name": "Certificate Assistant",
+    "icon": ""
+  },
+  "com.apple.Chess": {
+    "name": "Chess",
+    "icon": ""
+  },
+  "com.apple.chrono.WidgetRenderer-Activities": {
+    "name": "WidgetRenderer_Activities",
+    "icon": ""
+  },
+  "com.apple.clock": {
+    "name": "Clock",
+    "icon": ""
+  },
+  "com.apple.ClockAngel": {
+    "name": "Clock",
+    "icon": ""
+  },
+  "com.apple.CloudKit.ShareBear": {
+    "name": "iCloud",
+    "icon": ""
+  },
+  "com.apple.ColorSyncUtility": {
+    "name": "ColorSync Utility",
+    "icon": ""
+  },
+  "com.apple.Console": {
+    "name": "Console",
+    "icon": ""
+  },
+  "com.apple.controlcenter": {
+    "name": "ControlCenter",
+    "icon": ""
+  },
+  "com.apple.controlstrip": {
+    "name": "Control Strip",
+    "icon": ""
+  },
+  "com.apple.CoreLocationAgent": {
+    "name": "CoreLocationAgent",
+    "icon": ""
+  },
+  "com.apple.coreservices.uiagent": {
+    "name": "CoreServicesUIAgent",
+    "icon": ""
+  },
+  "com.apple.databaseevents": {
+    "name": "Database Events",
+    "icon": ""
+  },
+  "com.apple.DeskCam": {
+    "name": "Desk View",
+    "icon": ""
+  },
+  "com.apple.devicemanagementclient.alertagent": {
+    "name": "LaunchPolicyAlertAgent",
+    "icon": ""
+  },
+  "com.apple.DiagnosticsModeAssistant": {
+    "name": "Apple Diagnostics",
+    "icon": ""
+  },
+  "com.apple.DiagnosticsReporter": {
+    "name": "Diagnostics Reporter",
+    "icon": ""
+  },
+  "com.apple.Dictionary": {
+    "name": "Dictionary",
+    "icon": ""
+  },
+  "com.apple.DigitalColorMeter": {
+    "name": "Digital Color Meter",
+    "icon": ""
+  },
+  "com.apple.DirectoryUtility": {
+    "name": "Directory Utility",
+    "icon": ""
+  },
+  "com.apple.DiscHelper": {
+    "name": "DiscHelper",
+    "icon": ""
+  },
+  "com.apple.DiskImageMounter": {
+    "name": "DiskImageMounter",
+    "icon": ""
+  },
+  "com.apple.DiskUtility": {
+    "name": "Disk Utility",
+    "icon": ""
+  },
+  "com.apple.displaycalibrator": {
+    "name": "Pro Display Calibrator",
+    "icon": ""
+  },
+  "com.apple.dock": {
+    "name": "Dock",
+    "icon": ""
+  },
+  "com.apple.dt.CommandLineTools.installondemand": {
+    "name": "Install Command Line Developer Tools",
+    "icon": ""
+  },
+  "com.apple.DVDPlayer": {
+    "name": "DVD Player",
+    "icon": ""
+  },
+  "com.apple.DwellControl": {
+    "name": "Dwell Control",
+    "icon": ""
+  },
+  "com.apple.EnhancedLogging": {
+    "name": "Enhanced Logging",
+    "icon": ""
+  },
+  "com.apple.EraseAssistant": {
+    "name": "Erase Assistant",
+    "icon": ""
+  },
+  "com.apple.EscrowSecurityAlert": {
+    "name": "EscrowSecurityAlert",
+    "icon": ""
+  },
+  "com.apple.ExpansionSlotUtility": {
+    "name": "Expansion Slot Utility",
+    "icon": ""
+  },
+  "com.apple.exposelauncher": {
+    "name": "Mission Control",
+    "icon": ""
+  },
+  "com.apple.FaceTime": {
+    "name": "FaceTime",
+    "icon": ""
+  },
+  "com.apple.Family": {
+    "name": "Family",
+    "icon": ""
+  },
+  "com.apple.FamilyExtensionHost": {
+    "name": "FamilyExtensionHost",
+    "icon": ""
+  },
+  "com.apple.FileProvider-Feedback": {
+    "name": "FileProvider-Feedback",
+    "icon": ""
+  },
+  "com.apple.FileSystemUIAgent": {
+    "name": "FileSystemUIAgent",
+    "icon": ""
+  },
+  "com.apple.findmy": {
+    "name": "FindMy",
+    "icon": ""
+  },
+  "com.apple.FolderActionsDispatcher": {
+    "name": "FolderActionsDispatcher",
+    "icon": ""
+  },
+  "com.apple.FolderActionsSetup": {
+    "name": "Folder Actions Setup",
+    "icon": ""
+  },
+  "com.apple.FontBook": {
+    "name": "Font Book",
+    "icon": ""
+  },
+  "com.apple.freeform": {
+    "name": "无边记",
+    "icon": ""
+  },
+  "com.apple.gamecenter": {
+    "name": "Game Center",
+    "icon": ""
+  },
+  "com.apple.GameOverlayUI": {
+    "name": "GameOverlayUI",
+    "icon": ""
+  },
+  "com.apple.games": {
+    "name": "Games",
+    "icon": ""
+  },
+  "com.apple.GameTrampoline": {
+    "name": "GameTrampoline",
+    "icon": ""
+  },
+  "com.apple.GenerativePlaygroundApp": {
+    "name": "Image Playground",
+    "icon": ""
+  },
+  "com.apple.grapher": {
+    "name": "Grapher",
+    "icon": ""
+  },
+  "com.apple.helpviewer": {
+    "name": "Tips",
+    "icon": ""
+  },
+  "com.apple.Home": {
+    "name": "Home",
+    "icon": ""
+  },
+  "com.apple.iBooksX": {
+    "name": "Books",
+    "icon": ""
+  },
+  "com.apple.icq": {
+    "name": "iCloud+",
+    "icon": ""
+  },
+  "com.apple.Image_Capture": {
+    "name": "Image Capture",
+    "icon": ""
+  },
+  "com.apple.imageevents": {
+    "name": "Image Events",
+    "icon": ""
+  },
+  "com.apple.installer": {
+    "name": "Installer",
+    "icon": ""
+  },
+  "com.apple.Installer-Progress": {
+    "name": "Installer Progress",
+    "icon": ""
+  },
+  "com.apple.IOUIAgent": {
+    "name": "IOUIAgent",
+    "icon": ""
+  },
+  "com.apple.IPAInstaller": {
+    "name": "iOS App Installer",
+    "icon": ""
+  },
+  "com.apple.JavaLauncher": {
+    "name": "JavaLauncher",
+    "icon": ""
+  },
+  "com.apple.journal": {
+    "name": "Journal",
+    "icon": ""
+  },
+  "com.apple.KeyboardAccessAgent": {
+    "name": "KeyboardAccessAgent",
+    "icon": ""
+  },
+  "com.apple.KeyboardSetupAssistant": {
+    "name": "Keyboard Setup Assistant",
+    "icon": ""
+  },
+  "com.apple.keychainaccess": {
+    "name": "Keychain Access",
+    "icon": ""
+  },
+  "com.apple.Language-Chooser": {
+    "name": "Language Chooser",
+    "icon": ""
+  },
+  "com.apple.loginwindow": {
+    "name": "loginwindow",
+    "icon": ""
+  },
+  "com.apple.Magnifier": {
+    "name": "Magnifier",
+    "icon": ""
+  },
+  "com.apple.mail": {
+    "name": "邮件",
+    "icon": ""
+  },
+  "com.apple.ManagedClient": {
+    "name": "ManagedClient",
+    "icon": ""
+  },
+  "com.apple.Maps": {
+    "name": "地图",
+    "icon": ""
+  },
+  "com.apple.mcx.ProfileHelper": {
+    "name": "ProfileHelper",
+    "icon": ""
+  },
+  "com.apple.MDMMigrationTrampoline": {
+    "name": "MDMMigrationTrampoline",
+    "icon": ""
+  },
+  "com.apple.MediaRemoteUI": {
+    "name": "‎",
+    "icon": ""
+  },
+  "com.apple.MediaRemoteUIService": {
+    "name": "‎",
+    "icon": ""
+  },
+  "com.apple.MedicalImagingCalibrator": {
+    "name": "Medical Imaging Calibrator",
+    "icon": ""
+  },
+  "com.apple.MemorySlotUtility": {
+    "name": "Memory Slot Utility",
+    "icon": ""
+  },
+  "com.apple.MenuBarAgent": {
+    "name": "MenuBarAgent",
+    "icon": ""
+  },
+  "com.apple.MigrateAssistant": {
+    "name": "Migration Assistant",
+    "icon": ""
+  },
+  "com.apple.mobilephone": {
+    "name": "Phone",
+    "icon": ""
+  },
+  "com.apple.MobileSMS": {
+    "name": "信息",
+    "icon": ""
+  },
+  "com.apple.MTLReplayer": {
+    "name": "MTLReplayer",
+    "icon": ""
+  },
+  "com.apple.Music": {
+    "name": "音乐",
+    "icon": ""
+  },
+  "com.apple.musicrecognition.mac": {
+    "name": "MusicRecognitionMac",
+    "icon": ""
+  },
+  "com.apple.NetAuthAgent": {
+    "name": "NetAuthAgent",
+    "icon": ""
+  },
+  "com.apple.NewDeviceOutreachApp": {
+    "name": "Coverage Details",
+    "icon": ""
+  },
+  "com.apple.news": {
+    "name": "News",
+    "icon": ""
+  },
+  "com.apple.Notes": {
+    "name": "备忘录",
+    "icon": ""
+  },
+  "com.apple.notificationcenterui": {
+    "name": "NotificationCenter",
+    "icon": ""
+  },
+  "com.apple.NowPlayingTouchUI": {
+    "name": "NowPlayingTouchUI",
+    "icon": ""
+  },
+  "com.apple.OAHSoftwareUpdateApp": {
+    "name": "Rosetta 2 Updater",
+    "icon": ""
+  },
+  "com.apple.OBEXAgent": {
+    "name": "OBEXAgent",
+    "icon": ""
+  },
+  "com.apple.OSDUIHelper": {
+    "name": "OSDUIHelper",
+    "icon": ""
+  },
+  "com.apple.PackageUIKit.Install-in-Progress": {
+    "name": "Install in Progress",
+    "icon": ""
+  },
+  "com.apple.PairedDevices": {
+    "name": "Paired Devices",
+    "icon": ""
+  },
+  "com.apple.Pass-Viewer": {
+    "name": "Pass Viewer",
+    "icon": ""
+  },
+  "com.apple.PassViewer": {
+    "name": "PassViewer",
+    "icon": ""
+  },
+  "com.apple.Passwords": {
+    "name": "Passwords",
+    "icon": ""
+  },
+  "com.apple.PeopleMessageService": {
+    "name": "Family Request",
+    "icon": ""
+  },
+  "com.apple.PeopleViewService": {
+    "name": "PeopleViewService",
+    "icon": ""
+  },
+  "com.apple.PhotoBooth": {
+    "name": "Photo Booth",
+    "icon": ""
+  },
+  "com.apple.Photos": {
+    "name": "照片",
+    "icon": ""
+  },
+  "com.apple.PIPAgent": {
+    "name": "Picture in Picture",
+    "icon": ""
+  },
+  "com.apple.pluginIM.pluginIMRegistrator": {
+    "name": "RegisterPluginIM",
+    "icon": ""
+  },
+  "com.apple.podcasts": {
+    "name": "Podcasts",
+    "icon": ""
+  },
+  "com.apple.PowerChime": {
+    "name": "PowerChime",
+    "icon": ""
+  },
+  "com.apple.PreviewShell": {
+    "name": "Xcode Previews",
+    "icon": ""
+  },
+  "com.apple.PreviewShellMac": {
+    "name": "PreviewShellMac",
+    "icon": ""
+  },
+  "com.apple.print.add": {
+    "name": "Add Printer",
+    "icon": ""
+  },
+  "com.apple.printcenter": {
+    "name": "Print Center",
+    "icon": ""
+  },
+  "com.apple.ProblemReporter": {
+    "name": "Problem Reporter",
+    "icon": ""
+  },
+  "com.apple.QuickTimePlayerX": {
+    "name": "QuickTime Player",
+    "icon": ""
+  },
+  "com.apple.RapportUIAgent": {
+    "name": "RapportUIAgent",
+    "icon": ""
+  },
+  "com.apple.rcd": {
+    "name": "rcd",
+    "icon": ""
+  },
+  "com.apple.RemoteDesktopAgent": {
+    "name": "ARDAgent",
+    "icon": ""
+  },
+  "com.apple.RemoteDesktopMessageAgent": {
+    "name": "Remote Desktop Message",
+    "icon": ""
+  },
+  "com.apple.Safari": {
+    "name": "Safari",
+    "icon": ""
+  },
+  "com.apple.screencaptureui": {
+    "name": "screencaptureui",
+    "icon": ""
+  },
+  "com.apple.ScreenContinuity": {
+    "name": "iPhone Mirroring",
+    "icon": ""
+  },
+  "com.apple.ScreenSaver.Engine": {
+    "name": "ScreenSaverEngine",
+    "icon": ""
+  },
+  "com.apple.ScreenSharing": {
+    "name": "屏幕共享",
+    "icon": ""
+  },
+  "com.apple.screenshot.launcher": {
+    "name": "Screenshot",
+    "icon": ""
+  },
+  "com.apple.ScreenTimeWidgetApplication": {
+    "name": "Screen Time",
+    "icon": ""
+  },
+  "com.apple.ScriptEditor2": {
+    "name": "Script Editor",
+    "icon": ""
+  },
+  "com.apple.ScriptMenuApp": {
+    "name": "Script Menu",
+    "icon": ""
+  },
+  "com.apple.ScriptMonitor": {
+    "name": "ScriptMonitor",
+    "icon": ""
+  },
+  "com.apple.security.Keychain-Circle-Notification": {
+    "name": "Keychain Circle Notification",
+    "icon": ""
+  },
+  "com.apple.Settings": {
+    "name": "SettingsPlaceholder",
+    "icon": ""
+  },
+  "com.apple.SetupAssistant": {
+    "name": "Setup Assistant",
+    "icon": ""
+  },
+  "com.apple.Sharing.AirDropUI": {
+    "name": "AirDrop",
+    "icon": ""
+  },
+  "com.apple.shortcuts": {
+    "name": "Shortcuts",
+    "icon": ""
+  },
+  "com.apple.shortcuts.droplet": {
+    "name": "ShortcutDroplet",
+    "icon": ""
+  },
+  "com.apple.shortcuts.events": {
+    "name": "Shortcuts Events",
+    "icon": ""
+  },
+  "com.apple.ShortcutsActions": {
+    "name": "ShortcutsActions",
+    "icon": ""
+  },
+  "com.apple.Siri": {
+    "name": "Siri",
+    "icon": ""
+  },
+  "com.apple.siri.launcher": {
+    "name": "Siri",
+    "icon": ""
+  },
+  "com.apple.SoftwareUpdate": {
+    "name": "Software Update",
+    "icon": ""
+  },
+  "com.apple.SpacesTouchBarAgent": {
+    "name": "SpacesTouchBarAgent",
+    "icon": ""
+  },
+  "com.apple.Spotlight": {
+    "name": "Spotlight",
+    "icon": ""
+  },
+  "com.apple.SSMenuAgent": {
+    "name": "SSMenuAgent",
+    "icon": ""
+  },
+  "com.apple.Stickies": {
+    "name": "Stickies",
+    "icon": ""
+  },
+  "com.apple.systemevents": {
+    "name": "System Events",
+    "icon": ""
+  },
+  "com.apple.SystemIntents": {
+    "name": "SystemIntents",
+    "icon": ""
+  },
+  "com.apple.SystemProfiler": {
+    "name": "System Information",
+    "icon": ""
+  },
+  "com.apple.systemuiserver": {
+    "name": "SystemUIServer",
+    "icon": ""
+  },
+  "com.apple.tcc.AuthorizationPromptService": {
+    "name": "AuthorizationPromptService",
+    "icon": ""
+  },
+  "com.apple.TextInputMenuAgent": {
+    "name": "TextInputMenuAgent",
+    "icon": ""
+  },
+  "com.apple.TextInputSwitcher": {
+    "name": "TextInputSwitcher",
+    "icon": ""
+  },
+  "com.apple.ThermalTrap": {
+    "name": "ThermalTrap",
+    "icon": ""
+  },
+  "com.apple.Ticket-Viewer": {
+    "name": "Ticket Viewer",
+    "icon": ""
+  },
+  "com.apple.timemachine.HelperAgent": {
+    "name": "TMHelperAgent",
+    "icon": ""
+  },
+  "com.apple.tips": {
+    "name": "TipsSpotlightHandler",
+    "icon": ""
+  },
+  "com.apple.TV": {
+    "name": "TV",
+    "icon": ""
+  },
+  "com.apple.UIKitSystemApp": {
+    "name": "UIKitSystem",
+    "icon": ""
+  },
+  "com.apple.UniversalAccessControl": {
+    "name": "UniversalAccessControl",
+    "icon": ""
+  },
+  "com.apple.universalcontrol": {
+    "name": "UniversalControl",
+    "icon": ""
+  },
+  "com.apple.UnmountAssistantAgent": {
+    "name": "UnmountAssistantAgent",
+    "icon": ""
+  },
+  "com.apple.UserNotificationCenter": {
+    "name": "UserNotificationCenter",
+    "icon": ""
+  },
+  "com.apple.VoiceMemos": {
+    "name": "语音备忘录",
+    "icon": ""
+  },
+  "com.apple.VoiceOver": {
+    "name": "VoiceOver",
+    "icon": ""
+  },
+  "com.apple.VoiceOverUtility": {
+    "name": "VoiceOver Utility",
+    "icon": ""
+  },
+  "com.apple.wallpaper.agent": {
+    "name": "WallpaperAgent",
+    "icon": ""
+  },
+  "com.apple.WatchFaceAlert": {
+    "name": "WatchFaceAlert",
+    "icon": ""
+  },
+  "com.apple.weather": {
+    "name": "Weather",
+    "icon": ""
+  },
+  "com.apple.widgetkit.simulator": {
+    "name": "WidgetKit Simulator",
+    "icon": ""
+  },
+  "com.apple.wifi.diagnostics": {
+    "name": "Wireless Diagnostics",
+    "icon": ""
+  },
+  "com.apple.wifi.WiFiAgent": {
+    "name": "WiFiAgent",
+    "icon": ""
+  },
+  "com.apple.WindowManager": {
+    "name": "WindowManager",
+    "icon": ""
+  },
+  "com.apple.windowmanager.StageManagerOnboarding": {
+    "name": "StageManagerOnboarding",
+    "icon": ""
+  },
+  "com.apple.WorkoutAlert-Mac": {
+    "name": "WorkoutAlert-Mac",
+    "icon": ""
+  },
+  "com.ccswitch.desktop": {
+    "name": "CC Switch",
+    "icon": ""
+  },
+  "com.eastmoney.explore": {
+    "name": "东方财富",
+    "icon": ""
+  },
+  "com.glodonyuntu.cadreadermac": {
+    "name": "CAD快速看图",
+    "icon": ""
+  },
+  "com.Meltytech.Shotcut": {
+    "name": "Shotcut",
+    "icon": ""
+  },
+  "com.nousresearch.hermes.setup": {
+    "name": "Hermes",
+    "icon": ""
+  },
+  "com.tencent.QQMusicMac": {
+    "name": "QQMusic",
+    "icon": ""
+  },
+  "com.trycua.driver": {
+    "name": "Cua Driver",
+    "icon": ""
+  },
+  "com.valvesoftware.steam": {
+    "name": "Steam",
+    "icon": ""
+  },
+  "com.xunlei.XLPlayer": {
+    "name": "XLPlayer",
+    "icon": ""
+  },
+  "cx.c3.theunarchiver": {
+    "name": "The Unarchiver",
+    "icon": ""
+  },
+  "net.battle.app": {
+    "name": "Battle.net",
+    "icon": ""
+  },
+  "org.libreoffice.script": {
+    "name": "LibreOffice",
+    "icon": ""
+  },
+  "ru.keepcoder.Telegram": {
+    "name": "Telegram",
+    "icon": ""
+  },
+  "com.apple.backgroundtaskmanagement.agent": {
+    "name": "后台任务管理",
+    "icon": ""
+  },
+  "com.nousresearch.hermes": {
+    "name": "Hermes",
+    "icon": ""
+  },
+  "org.blenderfoundation.blender": {
+    "name": "Blender（通用图标）",
+    "icon": ""
+  },
+  "org.gimp.gimp": {
+    "name": "GIMP（通用图标）",
+    "icon": ""
+  },
+  "ai.artcraft.app": {
+    "name": "ArtCraft（通用图标）",
+    "icon": ""
+  }
+}
