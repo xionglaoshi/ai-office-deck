@@ -10,7 +10,7 @@ root=Path(a.root).expanduser().resolve()
 if root.exists():raise RuntimeError('Target already exists; preserve current data, use a new directory')
 if a.dry_run:print(json.dumps({'root':str(root),'registered':False}));raise SystemExit
 shutil.copytree(PACKAGE,root,ignore=shutil.ignore_patterns('.git','node_modules','dist','.wrangler','.dev.vars','.selfhost-owner.json','.sites-runtime','__pycache__','*.pyc','*.tsbuildinfo'))
-for sub in ['work','outputs','launchd','automation','inputs/wiki/projects','inputs/wiki/companies','inputs/wiki/decisions','inputs/wiki/meetings','inputs/wiki/caselaw','inputs/documents']:(root/sub).mkdir(parents=True,exist_ok=True)
+for sub in ['work','outputs','launchd','automation','inputs/wiki/business/projects','inputs/wiki/business/companies','inputs/wiki/business/decisions','inputs/wiki/business/meetings','inputs/wiki/business/cases','inputs/wiki/system/memory/ops','inputs/documents']:(root/sub).mkdir(parents=True,exist_ok=True)
 codex=Path(a.codex_root).expanduser();cfg={'site_url':'http://127.0.0.1:5199','codex_root':str(codex),'codex_db':str(codex/'state_5.sqlite'),'wiki_root':str(Path(a.wiki_root).expanduser()) if a.wiki_root else str(root/'inputs/wiki'),'wps_root':str(Path(a.docs_root).expanduser()) if a.docs_root else str(root/'inputs/documents'),'history_root':a.history_root,'reminders_list_id':a.reminders_list_id,'exclude_thread':'','proxy':'','local_service_file':str(root/'local-site/.selfhost-owner.json')}
 (root/'config.json').write_text(json.dumps(cfg,ensure_ascii=False,indent=2)+'\n');(root/'config.json').chmod(0o600)
 shutil.copy2(root/'docs/MODEL_TASK.md',root/'automation/prompt.md')

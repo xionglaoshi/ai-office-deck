@@ -87,3 +87,13 @@ launchctl load "$HOME/.codex/ai-office/launchd/com.ai-office.sync.plist"
 完整私人恢复包应包含：源码/锁/全部迁移/图标/姓名表、当前D1整个目录的冷快照、config及owner私有配置、提醒关联账本、模型检查点、真实当前模型任务导出/提示词、两个LaunchAgent/外部兼容软链接说明、运行说明、重建脚本、文件SHA256与权限清单；离线依赖包标架构和Node版本。不要包含旧源码副本、测试数据库、日志大集合、外发包和原Git历史。备份存本人私有地点，600文件权限；凭据缺失可新生成本地服务凭据，但不等于恢复外部账号权限。
 
 验证CRC/每文件SHA256、SQLite integrity_check、全部表行数及稳定ID/人工状态/墓碑/来源/简报保留；在新临时空库完成构建、登录、未授权401与合成用例，真实数据库只能只读核对。重启后实际网页GET、两个launchd状态、模型任务登记和下一触发时间均确认。源码相同不代表数据相同，自动任务存在不代表来源可读或模型已完成。
+
+## 当前分类与质量审计（2026-10-19）
+
+菜单顺序tracking待办事项、risk应关注事项、litigation涉诉跟踪、advice提醒及建议、payment应付款项、wiki知识库现状、history近期工作。前五类是互斥业务事项；wiki/history独立。自动待办须有本人职责或用户明确指定并填personalTask=true；不能把全部员工日常任务交给本人。risk/litigation/advice/payment均remind=false。保存完整保留清单，原ID、subjectKey、classification、人工正文和终态优先。关注存focus:<id>，整理不能覆盖；付款金额未知留空，已付/取消不入开放总额，原告请求不是我方确定应付。
+
+知识库现状以本人WIKI根质量审计日志.md为唯一活跃正本，类别clarification/quality。每条id/category/title/problem/decisionNeeded/pages/evidence/firstSeen/updated，具体来源版本可加sourceVersions。发现不同页面矛盾或关键信息不足，按对象和问题合并，保存A/B口径与明确待答问题，不自动改事实/标失效/清理来闭环；用户裁决后按授权修正并读回，实际生效才resolve关闭；记录由库外墓碑保护，不依据旧报告重开。无需为问题数凑10或按日期滚抄日志；不读认证秘密或无关受限人事。
+
+公开配置无真实问题与metrics，需本人已有ops优化报告及质量指标。配置wiki_metrics_file后，运行scripts/ai_office_wiki_health.py（需本地服务令牌已由setup生成），会读根台账发布并GET核对；普通采集尝试刷新，失败保留旧快照并在work说明。没有台账不能拿旧缓存代替或视为空。问题关闭命令详见scripts/wiki_quality_audit.py --help；--dry-run不创建目录或锁。新发生独立问题要独立具体ID，旧问题不能改名绕过关闭。
+
+搜索仅过滤前五类事项，不修改原始数据；近期工作YYYY/MM/DD；原始摘要、时区、迟到更新和去重不变。界面关注独立于旧priority排序，刷新和后续采集不应消除人工关注。

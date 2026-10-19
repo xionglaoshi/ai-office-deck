@@ -50,7 +50,7 @@ def source_item(make_item, key, title, body, group, path, date='', reporter='', 
     return item
 
 def collect_reports(wiki, make_item, clean, now):
-    group='WIKI日报'; root=pathlib.Path(wiki)/'wecom/report'; paths=files_under(root)
+    group='WIKI日报'; root=pathlib.Path(wiki)/'sources/wecom/report'; paths=files_under(root)
     items=[]; seen=set(); people=set(); comments=0; images=0; pages=0; total=0
     cutoff=(now-datetime.timedelta(days=21)).timestamp()
     for path in paths:

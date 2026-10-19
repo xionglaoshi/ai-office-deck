@@ -10,7 +10,8 @@
   "reminders_list_id": "",
   "local_service_file": "<OFFICE_ROOT>/local-site/.selfhost-owner.json",
   "focus_folders": [
-    "meetings",
-    "assistant-notes"
-  ]
+    "business/meetings",
+    "system/assistant"
+  ],
+  "wiki_metrics_file": "<YOUR_METRICS_JSON>"
 }

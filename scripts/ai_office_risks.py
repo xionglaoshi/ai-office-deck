@@ -5,7 +5,7 @@ SIGNAL=re.compile(r'风险|问题|争议|纠纷|仲裁|强制执行|未结案|�
 CLOSED=re.compile(r'已撤诉|协商和解办结|已办结|结案归档')
 def collect_risks(wiki,make_item,clean,now):
  root=pathlib.Path(wiki);result=[];errors=0;scanned=0
- paths=files_under(root/'caselaw')+files_under(root/'meetings')
+ paths=files_under(root/'business/cases')+files_under(root/'business/meetings')
  for path in paths:
   if CLOSED.search(path.stem):continue
   try:text=path.read_text()
@@ -22,12 +22,12 @@ def collect_risks(wiki,make_item,clean,now):
    if line.startswith('#'):section=line.strip('# ').strip()
    if not SIGNAL.search(line) or line.startswith(('title:','tags:','> 来源')) or CLOSED.search(line):continue
    # Full meaningful lines are retained; long evidence is not silently omitted.
-   group='案件与舆情' if path.parent.name=='caselaw' else section
+   group='案件与舆情' if path.parent.name=='cases' else section
    groups.setdefault(group,[]).append((line_no,clean(line,12000)))
   for section,lines in list(groups.items()):
    if not lines:continue
    rel=str(path.relative_to(root));key='wiki-risk:'+rel+':'+section
-   title=('案件/舆情线索：' if path.parent.name=='caselaw' else '会议问题线索：')+path.stem+((' · '+section) if path.parent.name=='meetings' else '')
+   title=('案件/舆情线索：' if path.parent.name=='cases' else '会议问题线索：')+path.stem+((' · '+section) if path.parent.name=='meetings' else '')
    note='风险候选，不能直接认定现实仍有效；须核对当前进展、已判决/结案/解决证据与关联来源。\n来源口径日期：'+source_date+'\n原始位置：'+str(path)+':'+str(lines[0][0])+'\n正文线索：\n'+'\n'.join(str(n)+': '+line for n,line in lines)
    entry=make_item(key,title,'WIKI',path.stem,note);entry['subjectKey']=key;entry['sourcePath']=str(path);entry['sourceDate']=source_date;entry['excerptOnly']=len(note)>20000;result.append(entry)
  if scanned==0:raise ValueError('No readable applicable risk pages')

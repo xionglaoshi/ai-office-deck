@@ -130,8 +130,8 @@ body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,'PingFang SC','
 /* Three full-width reading sections; no fixed-height lists or item truncation. */
 main{max-width:none;width:100%;padding:32px clamp(18px,4vw,72px)}
 .office-panels{display:flex;flex-direction:column;gap:26px;width:100%}
-.office-section{width:100%;min-width:0;border-top:4px solid #2459e0}
-.office-section.risk{border-top-color:#c8782b}.office-section.advice{border-top-color:#627e68}
+.office-section,.computer-history{width:100%;min-width:0;border-top:4px solid #2459e0}
+.office-section.risk,.office-section.advice{border-top-color:#2459e0}
 .section-caption{margin:0;padding:0 24px 14px;color:#6c7b91;font-size:14px}
 .office-card{border-top:1px solid var(--border);padding:22px 24px;min-width:0;overflow-wrap:anywhere}
 .card-heading{display:flex;align-items:flex-start;gap:12px}.card-heading h3{flex:1;font-size:18px;line-height:1.6;margin:0;font-weight:600}
@@ -164,3 +164,15 @@ main{max-width:none;width:100%;padding:32px clamp(18px,4vw,72px)}
 
 .history-pagination{display:flex;align-items:center;justify-content:space-between;gap:14px;border-top:1px solid var(--border);padding:18px 24px}.history-pagination>span{color:#7a8699;font-size:13px;text-align:center}.history-pagination button{white-space:nowrap}.computer-history{scroll-margin-top:24px}
 @media(max-width:600px){.history-pagination{display:grid;grid-template-columns:auto minmax(0,1fr) auto;padding:16px 18px;gap:8px}.history-pagination>span{min-width:0;font-size:11px;line-height:1.5}.history-pagination button{padding-left:10px;padding-right:10px}}
+
+/* 应付总额卡片 */
+.payment-total{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:4px 24px 24px;padding:22px 24px;border:1px solid #dce4f1;border-radius:16px;background:#f7f9fd;box-shadow:0 2px 8px rgba(25,45,80,.04)}
+.payment-total-label{font-size:17px;font-weight:600;color:#344563;white-space:nowrap}
+.payment-total-amount{font-size:32px;line-height:1.2;font-weight:700;color:#182b50;letter-spacing:-.6px;font-variant-numeric:tabular-nums;white-space:nowrap}
+@media(max-width:600px){.payment-total{margin:4px 18px 20px;padding:20px 18px;gap:12px}.payment-total-label{font-size:16px}.payment-total-amount{font-size:clamp(22px,5.2vw,30px)}}
+
+.focus-badge{display:inline-flex;align-items:center;white-space:nowrap;color:#b91c1c;background:#fee2e2;border:1px solid #fecaca;border-radius:6px;padding:4px 8px;font-size:13px;font-weight:600}
+
+.office-sidebar{position:sticky;top:24px;min-width:0}.office-sidebar .office-menu{position:static}.office-search{margin-bottom:16px}.office-search label{display:block;font-size:14px;color:#5b6b82;margin-bottom:8px}.office-search input{width:100%;min-width:0}.office-search>button{border:0;background:transparent;color:#b91c1c;font:inherit;font-size:12px;padding:6px 0;cursor:pointer}.searching .office-menu button.active{background:#fee2e2;color:#b91c1c}.searching .office-menu button.active small{background:#fecaca;color:#991b1b}.searching .office-menu button:hover{background:#fff1f2}@media(max-width:700px){.office-sidebar{position:static}.office-search{margin-bottom:12px}}
+
+.wiki-health-summary{font-size:17px;line-height:1.8;padding:18px 24px;background:#f5f8ff;margin:0 0 16px}.wiki-health>.muted,.wiki-health>.history-warning,.wiki-health-subheading,.wiki-health-boundary{margin:16px 24px}.wiki-issues{margin:0;padding:0 24px 0 52px}.wiki-issues>li{padding:20px 0;border-bottom:1px solid var(--border)}.wiki-issues>li::marker{font-size:18px;font-weight:600;color:#2459b0}.wiki-issue-heading{display:flex;gap:12px;align-items:start;justify-content:space-between}.wiki-issue-heading h3{margin:0;font-size:17px}.wiki-issue-heading span{font-size:12px;white-space:nowrap;color:#9f1239;background:#fff1f2;padding:3px 8px;border-radius:5px}.wiki-issues p{line-height:1.8;margin:10px 0;color:#526580}.wiki-page-links{display:flex;flex-direction:column;gap:5px;overflow-wrap:anywhere;font-size:13px}.wiki-page-links a{color:#2459b0}.wiki-issues details{font-size:13px;color:#718096;margin-top:12px}.wiki-issues pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit}.wiki-health-boundary{font-size:13px;color:#718096;padding-bottom:20px}

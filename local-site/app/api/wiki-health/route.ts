@@ -1,0 +1,9 @@
+import {env} from 'cloudflare:workers';
+import {getChatGPTUser} from '@/app/chatgpt-auth';
+import {serviceDenied} from '@/lib/owner-auth';
+import {z} from 'zod';
+export const dynamic='force-dynamic';
+const answer=(v:unknown,status=200)=>Response.json(v,{status,headers:{'Cache-Control':'private, no-store'}});
+const schema=z.object({updated:z.string().datetime(),reportDate:z.string(),reviewedAt:z.string(),reviewStale:z.boolean(),summary:z.string(),metrics:z.record(z.string(),z.unknown()),issues:z.array(z.object({id:z.string(),category:z.enum(['clarification','quality']),title:z.string(),problem:z.string(),decisionNeeded:z.string(),type:z.string(),pages:z.array(z.string()),evidence:z.unknown()})),coverageGap:z.string(),sourceVersions:z.record(z.string(),z.string())});
+export async function GET(){if(!await getChatGPTUser())return answer({message:'请登录'},401);if(!env.DB)return answer({message:'存储暂不可用'},503);const row=await env.DB.prepare('SELECT payload FROM sync_state WHERE id=?').bind('wiki-health').first<{payload:string}>();return answer({health:row?JSON.parse(row.payload):null});}
+export async function POST(req:Request){const denied=serviceDenied(req);if(denied)return denied;const data=schema.safeParse(await req.json());if(!data.success)return answer({message:'知识库快照格式无效'},400);if(!env.DB)return answer({message:'存储暂不可用'},503);const old=await env.DB.prepare('SELECT updated FROM sync_state WHERE id=?').bind('wiki-health').first<{updated:string}>();if(old&&old.updated>data.data.updated)return answer({message:'已有更新快照'},409);await env.DB.prepare('INSERT INTO sync_state(id,payload,updated) VALUES(?,?,?) ON CONFLICT(id) DO UPDATE SET payload=excluded.payload,updated=excluded.updated').bind('wiki-health',JSON.stringify(data.data),data.data.updated).run();return answer({success:true});}

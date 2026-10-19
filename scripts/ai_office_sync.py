@@ -59,7 +59,7 @@ def collect(config):
  except Exception as e:sources.append(dict(name='Codex',status='error',count=0,message='本机会话读取失败：'+type(e).__name__))
  try:
   wiki=pathlib.Path(config['wiki_root']);assert wiki.is_dir();count=0;read_errors=0;files_read=0
-  for folder in ('projects','companies','decisions','meetings'):
+  for folder in ('business/projects','business/companies','business/decisions','business/meetings'):
    root=wiki/folder
    if not root.is_dir():raise FileNotFoundError('Expected WIKI section missing')
    for path in files_under(root):
@@ -107,9 +107,9 @@ def collect(config):
   entry['sourceGroup']='WIKI问题与风险' if entry.get('subjectKey','').startswith('wiki-risk:') else entry['source']
  # Source modules are read-only. Never authenticate or fetch live mail here.
  additions=[('WIKI日报',lambda:collect_reports(config['wiki_root'],item,clean,now)),
- ('WIKI部署与关注',lambda:collect_documents(pathlib.Path(config['wiki_root']),tuple(config.get('focus_folders',['meetings','assistant-notes'])),'WIKI部署与关注',item,clean,now,days=90)),
+ ('WIKI部署与关注',lambda:collect_documents(pathlib.Path(config['wiki_root']),tuple(config.get('focus_folders',['business/meetings','system/assistant'])),'WIKI部署与关注',item,clean,now,days=90)),
  ('WIKI研究',lambda:collect_documents(pathlib.Path(config['wiki_root']),('reports','industry'),'WIKI研究',item,clean,now,days=30,signal=r'舆情|负面|行业|调研|研究|趋势')),
- ('WIKI邮件',lambda:collect_documents(pathlib.Path(config['wiki_root']),('wecom/mail',),'WIKI邮件',item,clean,now,days=30))]
+ ('WIKI邮件',lambda:collect_documents(pathlib.Path(config['wiki_root']),('sources/wecom/mail',),'WIKI邮件',item,clean,now,days=30))]
  for name,reader in additions:
   try:
    found,status=reader();items.extend(found);sources.append(status)
@@ -150,5 +150,11 @@ def main():
  except Exception as e:
   # No response bodies, transcript text, request headers, or credentials in logs.
   status={'status':'failed','time':datetime.datetime.now(TZ).isoformat(),'errorType':type(e).__name__};(ROOT/'last-attempt.json').write_text(json.dumps(status));print(json.dumps(status));return 1
+ try:
+  from ai_office_wiki_health import publish
+  publish()
+ except Exception as error:
+  (ROOT/'work').mkdir(exist_ok=True)
+  (ROOT/'work/wiki-health-refresh-error.json').write_text(json.dumps({'errorType':type(error).__name__,'message':'知识库现状未配置或刷新失败，保留已有快照，不代表没有问题'}))
  (ROOT/'last-success.json').write_text(json.dumps(result,ensure_ascii=False,indent=2));status={'status':'success' if result.get('coverageComplete') else 'partial','time':datetime.datetime.now(TZ).isoformat(),'updated':result['updated'],'received':result['received'],'coverageComplete':result.get('coverageComplete',False),'readbackVerified':True};(ROOT/'last-attempt.json').write_text(json.dumps(status));print(json.dumps(status));return 0
 if __name__=='__main__':sys.exit(main())
